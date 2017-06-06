@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+	<properties resource="db.properties" />
+	<typeAliases>
+		<typeAlias type="com.suyoung.web.doc.DocVO" alias="doc" />
+		<typeAlias type="com.suyoung.web.doc.AuthorityVO" alias="authority" />
+		<typeAlias type="com.suyoung.web.doc.EmployeeVO" alias="employee" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="spring/mapper/doc-mapper.xml"></mapper>
+		<mapper resource="spring/mapper/employee-mapper.xml"></mapper>
+	</mappers>
+</configuration>
