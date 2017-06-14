@@ -1,7 +1,5 @@
 package com.suyoung.web.doc;
 
-import java.util.List;
-
 public class AuthorityVO {
 	private int id;
 	private String role;

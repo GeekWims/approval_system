@@ -3,6 +3,10 @@ package com.suyoung.web.security;
 import org.springframework.security.core.GrantedAuthority;
 
 public class GrantedAuthorityImpl implements GrantedAuthority {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String authority;
 	
 	
@@ -20,7 +24,6 @@ public class GrantedAuthorityImpl implements GrantedAuthority {
 
 	@Override
 	public String getAuthority() {
-		// TODO Auto-generated method stub
 		return authority;
 	}
 
