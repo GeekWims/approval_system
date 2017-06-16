@@ -9,20 +9,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<title>문서 리스트</title>
+<title>결재 리스트</title>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<ul class="nav nav-pills">
 				<li><a href="#"><sec:authentication property="principal.name" /> 님</a></li>
-				<li><a href="/doc/request">결재 리스트</a></li>
+				<li><a href="/">내 문서 리스트</a></li>
 				<li><a href="/j_spring_security_logout">로그아웃</a></li>
 			</ul>
 		</div>
 
 		<div class="row">
-			<h1>내가 작성한 문서들</h1>
+			<h1>내가 결재 해야할 문서들</h1>
 
 			<table class="table">
 				<tr>

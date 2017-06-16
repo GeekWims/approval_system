@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ApprovalDAO">
+
+	<insert id="insert">
+		insert into approval (status, docid, personincharge) values(#{status}, #{docId}, #{personInCharge})
+	</insert>
+
+	<select id="selectListByDocId" parameterType="int" resultType="approval">
+		select p.*, d.title docTitle, e.name personinchargename from approval p left outer join employee e on e.id = p.personincharge left outer join document d on p.docid = d.id where p.docid = #{docId} 
+	</select>
+
+	<update id="updateStatus">
+		update approval set status = #{status}, moddate = CURRENT_TIMESTAMP where docid = #{docId} and personincharge = #{personInCharge}
+	</update>
+</mapper>

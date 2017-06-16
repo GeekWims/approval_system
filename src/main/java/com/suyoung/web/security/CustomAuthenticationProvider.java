@@ -13,9 +13,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.suyoung.web.doc.AuthorityVO;
-import com.suyoung.web.doc.EmployeeDAO;
-import com.suyoung.web.doc.EmployeeVO;
+import com.suyoung.web.dao.employee.AuthorityVO;
+import com.suyoung.web.dao.employee.EmployeeDAO;
+import com.suyoung.web.dao.employee.EmployeeVO;
 
 @Component("customAuthenticationProvider")
 public class CustomAuthenticationProvider implements AuthenticationProvider {

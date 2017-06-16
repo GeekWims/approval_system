@@ -4,14 +4,15 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
   
 <configuration>
-	<properties resource="db.properties" />
 	<typeAliases>
-		<typeAlias type="com.suyoung.web.doc.DocVO" alias="doc" />
-		<typeAlias type="com.suyoung.web.doc.AuthorityVO" alias="authority" />
-		<typeAlias type="com.suyoung.web.doc.EmployeeVO" alias="employee" />
+		<typeAlias type="com.suyoung.web.dao.document.DocVO" alias="doc" />
+		<typeAlias type="com.suyoung.web.dao.employee.AuthorityVO" alias="authority" />
+		<typeAlias type="com.suyoung.web.dao.employee.EmployeeVO" alias="employee" />
+		<typeAlias type="com.suyoung.web.dao.approval.ApprovalVO" alias="approval" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="spring/mapper/doc-mapper.xml"></mapper>
 		<mapper resource="spring/mapper/employee-mapper.xml"></mapper>
+		<mapper resource="spring/mapper/approval-mapper.xml"></mapper>
 	</mappers>
 </configuration>

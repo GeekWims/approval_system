@@ -8,4 +8,44 @@
 		where title like #{title}
 		order by id desc
 	</select>
+	
+	<select id="getMyDocList" resultType="doc">
+		select d.*, e.name writerName from document d
+		left outer join employee e on e.id = d.writer
+		where writer = #{writer}
+		order by id desc
+	</select>
+	
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+		insert into document (title, content, writer, type, status) values(#{title}, #{content}, #{writer}, #{type}, #{status})
+	</insert>
+	
+	<select id="getAllDocTypes" resultType="java.lang.String">
+		select name from doc_type
+	</select>
+	
+	<select id="getDoc" parameterType="int" resultType="doc">
+		select d.*, e.name writerName from document d
+		left outer join employee e on e.id = d.writer
+		where d.id = #{title}
+	</select>
+	
+	<select id="getRequestDocs" parameterType="int" resultType="doc">
+		select d.*, e.name writerName from document d
+		left outer join employee e on e.id = d.writer
+		left outer join approval a on a.docid = d.id
+		where a.personincharge = #{userid}
+	</select>
+	
+	<update id="updateStatus">
+		update document set status = #{status} where id = #{id}
+	</update>
+		
+	<update id="update">
+		update document set title = #{title}, content = #{content}, moddate = CURRENT_TIMESTAMP where id = #{id}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from document where id = #{id}
+	</delete>
 </mapper>

@@ -1,6 +1,4 @@
-package com.suyoung.web.doc;
-
-import java.util.List;
+package com.suyoung.web.dao.employee;
 
 public class AuthorityVO {
 	private int id;

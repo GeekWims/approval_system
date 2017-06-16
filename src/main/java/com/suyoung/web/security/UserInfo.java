@@ -1,8 +1,16 @@
 package com.suyoung.web.security;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class UserInfo {
+public class UserInfo implements Serializable {
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
 	private String username;
 	private String phone;

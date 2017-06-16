@@ -1,4 +1,4 @@
-package com.suyoung.web.doc;
+package com.suyoung.web.dao.employee;
 
 import java.util.List;
 
@@ -8,6 +8,10 @@ public class EmployeeVO {
 	private String phone;
 	private String username;
 	private String password;
+	private String team;
+	
+	// Foreign key
+	private int order; 
 	private List<AuthorityVO> authorities;
 
 	public int getId() {
@@ -62,5 +66,21 @@ public class EmployeeVO {
 	public String toString() {
 		return "EmployeeVO [id=" + id + ", name=" + name + ", phone=" + phone + ", username=" + username + ", password="
 				+ password + ", authorities=" + authorities + "]";
+	}
+
+	public int getOrder() {
+		return order;
+	}
+
+	public void setOrder(int order) {
+		this.order = order;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
 	}
 }
