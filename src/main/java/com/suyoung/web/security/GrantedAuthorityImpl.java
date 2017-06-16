@@ -7,7 +7,10 @@ public class GrantedAuthorityImpl implements GrantedAuthority {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 61e684d19d8f059d0f7e0f8dc59f5eadf3f1b7db
 	private String authority;
 	
 	
@@ -25,7 +28,6 @@ public class GrantedAuthorityImpl implements GrantedAuthority {
 
 	@Override
 	public String getAuthority() {
-		// TODO Auto-generated method stub
 		return authority;
 	}
 

@@ -25,7 +25,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 	
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-		// TODO Auto-generated method stub
 		UsernamePasswordAuthenticationToken token = (UsernamePasswordAuthenticationToken) authentication;
 		
 		UserInfo userInfo = findUser(token.getName());
@@ -44,7 +43,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 	}
 
 	private UserInfo findUser(String name) {
-		// TODO Auto-generated method stub
 		
 		UserInfo userInfo = new UserInfo();
 		EmployeeVO employee = employeeDao.getEmployeeByUsername(name);
@@ -83,7 +81,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 	
 	@Override
 	public boolean supports(Class<?> authentication) {
-		// TODO Auto-generated method stub
 		return UsernamePasswordAuthenticationToken.class.isAssignableFrom(authentication);
 	}
 	
